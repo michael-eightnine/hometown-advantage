@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import {Router, Route, IndexRoute, browserHistory} from 'react-router';
+import {Router, Route, IndexRoute, browserHistory, useRouterHistory} from 'react-router';
+import { createHistory } from 'history'
 
 import Main from './components/common/main.component';
 import Grid from './components/grid/grid.component';
@@ -14,13 +15,16 @@ class BlogApp extends Component {
 				{
 					title: "Post Title 1",
 					type: "svg",
+          date: "February 19th, 2017",
           previewMedia: "http://placehold.it/250x250",
-
+          previewText: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 				},
         {
 					title: "Post Title 2",
 					type: "svg",
+          date: "February 22nd, 2017",
           previewMedia: "http://placehold.it/250x250",
+          previewText: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 				},
         {
 					title: "Post Title 3",
@@ -63,17 +67,20 @@ class BlogApp extends Component {
           previewMedia: "http://placehold.it/250x250",
 				}
 			],
-			filterBy: "all"
+			filterBy: "latest"
     };
 	}
 
   render() {
     const gridItems = this.state.posts;
     const filterBy = this.state.filterBy;
+    const history = useRouterHistory(createHistory)({
+      basename: '/blog-dev'
+    })
 
     return (
-      <Router history={browserHistory}>
-        <Route component={Main}>
+      <Router history={history}>
+        <Route component={Main} filterBy={filterBy}>
           <Route path="/" component={Grid}
             gridItems={gridItems}
             filterBy={filterBy}
@@ -81,6 +88,10 @@ class BlogApp extends Component {
           <Route path="/svg" component={Grid}
             gridItems={gridItems}
             filterBy="svg"
+          />
+          <Route path="/drawing" component={Grid}
+            gridItems={gridItems}
+            filterBy="drawing"
           />
           <Route path="/video" component={Grid}
             gridItems={gridItems}

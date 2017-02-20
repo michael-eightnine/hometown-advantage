@@ -1,0 +1,38 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: sans-serif;
+}
+
+//LAYOUT
+header {
+	padding: 0 5%;
+	height: 50px;
+}
+
+.view-wrap {
+	padding-top: 100px;
+}
+
+.width-container {
+	max-width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+//TYPO
+a {
+	text-decoration: none;
+	color: $darkText;
+
+	&:hover {
+		text-decoration: underline;
+	}
+
+	&:focus, &:active {
+		color: $activeText;
+	}
+}

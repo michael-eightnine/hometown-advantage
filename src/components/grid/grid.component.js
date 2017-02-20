@@ -17,8 +17,8 @@ class Grid extends Component {
 
 	//map gridItems to individual <GridItem />'s - also
 	generateGrid() {
-		//if filter type is "all" return all
-		if(this.props.route.filterBy == "all") {
+		//if filter type is "latest" (aka view all) return all
+		if(this.props.route.filterBy == "latest") {
 			const gridDOM = this.props.route.gridItems.map((item, i) => {
 				return this.renderItem(i)
 			});
@@ -37,9 +37,11 @@ class Grid extends Component {
 
 	render() {
 		return (
-			<ul className="grid-list">
-				{this.generateGrid()}
-			</ul>
+			<div>
+				<section className="grid-list">
+					{this.generateGrid()}
+				</section>
+			</div>
 		)
 	}
 }
