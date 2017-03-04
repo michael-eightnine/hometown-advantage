@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
-import logo from '../../assets/wordmark.svg';
 import { Link } from 'react-router';
+
+import indentity from '../../svg/identity.svg';
+import closeIcon from '../../svg/close.svg';
+
+import CollectionList from '../../data/collection.data'
 
 class Main extends Component {
 	constructor() {
@@ -15,47 +19,52 @@ class Main extends Component {
 		this.setState({navActive: !this.state.navActive});
 	}
 
+	generateCollectionLinks() {
+		const collectionLinks = CollectionList.map((item, i) => {
+			let linkRef = "/collections/" + item.replace(/\s+/g, '-').toLowerCase();
+			return (
+				<li key={i} className="submenu-item">
+					<Link to={linkRef} className="submenu-item-link" onClick={this.handleClick}>{item}</Link>
+				</li>
+			)
+		});
+		return collectionLinks;
+	}
+
 	render() {
 		return (
 			<div className="app-wrap">
 				<header>
-					<div className="header-item header-item-viewing-label">
-						Viewing: <span>{this.props.route.filterBy}</span>
-					</div>
 					<div className="header-item header-item-logo">
 						<Link to="/">
-							<img src={logo} alt="warning" />
+							<img src={indentity} alt="warning" />
 						</Link>
 					</div>
-					<div
-						className={this.state.navActive ? "header-item header-item-toggle active" : "header-item header-item-toggle "}>
-						<div className="nav-toggle" onClick={this.handleClick}>
-							<span></span>
-							<span></span>
-							<span></span>
-							<span></span>
-						</div>
-					</div>
-					<nav>
-						<div className="nav-subsection">
-							<h4>Posts</h4>
-							<Link to="/" activeClassName="active" onClick={this.handleClick}>Latest</Link>
-							<Link to="/svg" activeClassName="active" onClick={this.handleClick}>SVG</Link>
-							<Link to="/drawing" activeClassName="active" onClick={this.handleClick}>Drawing</Link>
-							<Link to="/video" activeClassName="active" onClick={this.handleClick}>Video</Link>
-						</div>
-						<div className="nav-subsection">
-							<h4>Other</h4>
-							<Link to="/about" activeClassName="active" onClick={this.handleClick}>About</Link>
-						</div>
-					</nav>
+					<ul className={this.state.navActive ? "nav header-item submenu-active" : "nav header-item"}>
+						<li className="nav-item">
+							<Link to="/" activeClassName="active-link" className="nav-item-link">Stream</Link>
+						</li>
+						<li className="nav-item has-submenu">
+							<div onClick={this.handleClick} className="submenu-toggle nav-item-link">Collections</div>
+							<ul className={this.state.navActive ? "submenu active" : "submenu"}>
+								<li className="submenu-header">
+									Collections
+								</li>
+								{this.generateCollectionLinks()}
+							</ul>
+							<div className="submenu-close"><img src={closeIcon} alt="warning" onClick={this.handleClick} /></div>
+						</li>
+						<li className="nav-item">
+							<Link to="/" activeClassName="active-link" className="nav-item-link">The&nbsp;.Advantage</Link>
+						</li>
+					</ul>
 				</header>
 
-				<div className="view-wrap">
+				<main className="view-wrap">
 					<div className="width-container">
 						{this.props.children}
 					</div>
-				</div>
+				</main>
 			</div>
 		)
 	}

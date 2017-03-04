@@ -1,7 +1,10 @@
-@import "partials/_reset";
-@import "partials/_vars";
+@import "partials/util/_mixins";
+@import "partials/util/_reset";
+@import "partials/util/_vars";
+
 @import "partials/_base";
 @import "partials/_header";
+@import "partials/_nav";
 @import "partials/grid/_grid";
 @import "partials/grid/_grid-item";
 @import "partials/grid/_grid-detail";

@@ -1,18 +1,18 @@
-
 header {
 	position: fixed;
 	left: 0;
 	top: 0;
-	width: 100%;
+	width: 180px;
 	background-color: transparent;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	align-items: center;
+	flex-wrap: wrap;
 	align-content: space-between;
 	z-index: 50;
 
 	.header-item {
-		flex: 1;
+		width: 100%;
 
 		&-viewing-label {
 			font-size: 14px;
@@ -23,120 +23,10 @@ header {
 		&-logo {
 			text-align: center;
 			img {
-				max-width: 165px;
+				width: 110px;
 				display: block;
 				margin-left: auto;
 				margin-right: auto;
-			}
-		}
-
-		&-toggle {
-			text-align: right;
-
-			.nav-toggle {
-				display: flex;
-				flex-direction: column;
-				justify-content: space-between;
-				margin-left: auto;
-				width: 40px;
-				height: 40px;
-				padding: 10px;
-				background-color: $darkText;
-				cursor: pointer;
-				border: 1px solid #fff;
-
-				span {
-					display: block;
-					height: 2px;
-					background-color: #fff;
-					transition: all .3s ease;
-				}
-			}
-
-			&.active .nav-toggle span {
-				&:first-of-type,
-				&:last-of-type {
-					opacity: 0;
-				}
-
-				&:first-of-type {
-					transform: translateY(-150%);
-				}
-
-				&:last-of-type {
-					transform: translateY(150%);
-				}
-
-				&:nth-of-type(2) {
-					transform: translateY(2.75px) rotate(-45deg);
-				}
-
-				&:nth-of-type(3) {
-					transform: translateY(-2.75px) rotate(45deg);
-				}
-			}
-
-			&.active + nav {
-				max-height: 65vh;
-				max-width: 80vw;
-				// min-width: 35%;
-			}
-		}
-	}
-
-	//flyout nav
-	nav {
-		position: fixed;
-		background-color: $darkText;
-		top: 6px;
-		right: calc(5% + 1px);
-		z-index: -1;
-		max-width: 15px;
-		max-height: 25px;
-		overflow: hidden;
-		transition: max-height .5s ease, max-width .5s ease;
-
-		.nav-subsection {
-			margin-bottom: 35px;
-	    padding-right: 60px;
-	    padding-left: 20px;
-	    white-space: nowrap;
-	    min-width: 40vw;
-
-			&:first-of-type {
-				padding-top: 80px;
-			}
-
-			&:last-of-type {
-				margin-bottom: 0;
-				padding-bottom: 20px;
-			}
-
-			h4 {
-				color: #fff;
-				font-size: 13px;
-				text-transform: uppercase;
-				font-weight: bold;
-				margin-top: 0;
-				margin-bottom: 10px;
-				padding-bottom: 10px;
-				border-bottom: 1px solid #fff;
-			}
-
-			a {
-				color: #fff;
-				display: inline-block;
-				line-height: 18px;
-				margin-right: 25px;
-
-				&:last-of-type {
-					margin-right: 0;
-				}
-
-				&.active {
-					// font-style: italic;
-					text-decoration: underline;
-				}
 			}
 		}
 	}
