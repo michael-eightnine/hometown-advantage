@@ -2,9 +2,12 @@
 @import "partials/util/_reset";
 @import "partials/util/_vars";
 
-@import "partials/_base";
-@import "partials/_header";
-@import "partials/_nav";
+@import "partials/common/_base";
+@import "partials/common/_btns";
+@import "partials/common/_header";
+@import "partials/common/_nav";
+
+@import "partials/pages/_splash";
 
 @import "partials/grid/_grid";
 @import "partials/grid/_grid-item";
@@ -12,4 +15,4 @@
 @import "partials/grid/_grid-modal";
 @import "partials/grid/_grid-placeholder";
 
-@import "partials/_about";
+@import "partials/pages/_about";

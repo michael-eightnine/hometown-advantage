@@ -1,0 +1,10 @@
+.btn-svg {
+	.cursor {
+		transition: transform .25s ease;
+	}
+	&:hover {
+		.cursor {
+			transform: translateY(-20px);
+		}
+	}
+}

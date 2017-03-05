@@ -1,8 +1,6 @@
 .grid-placeholder {
 	width: calc(100% / 3);
-	// flex: 1;
-	// height: calc((100vw - 200px) / 3);
-	padding-bottom: 33%;
+	padding-bottom: calc(100% / 3);
 	position: relative;
 
 	.spinner {

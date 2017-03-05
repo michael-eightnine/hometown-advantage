@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import {Router, Route, IndexRoute, browserHistory, useRouterHistory} from 'react-router';
+import {Router, Route, useRouterHistory} from 'react-router';
 import { createHistory } from 'history'
 
+import Splash from './components/splash/splash.component';
 import Main from './components/common/main.component';
 import Grid from './components/grid/grid.component';
-import GridDetail from './components/grid/grid_detail.component';
 import About from './components/about/about.component';
 
 import ContentData from './data/content.data';
@@ -41,16 +41,14 @@ class BlogApp extends Component {
 
     return (
       <Router history={history}>
+        <Route path="/" component={Splash} />
         <Route component={Main} filterBy={filterBy}>
-          <Route path="/" component={Grid}
+          <Route path="/stream" component={Grid}
             gridItems={gridItems}
             filterBy={filterBy}
           />
           {this.generateCollectionRoutes(gridItems)}
-          <Route path="/:id" component={GridDetail}
-            gridItems={gridItems}
-          />
-          <Route path="/about" component={About}/>
+          <Route path="/the-advantage" component={About}/>
         </Route>
       </Router>
 		)
