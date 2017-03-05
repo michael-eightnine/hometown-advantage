@@ -1,28 +1,62 @@
 import React, { Component } from 'react';
+import LazyLoad from 'react-lazyload';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 
 import GridItem from "./grid_item.component";
+import GridModal from "./grid_modal.component";
+import GridPlaceholder from './grid_placeholder.component.js'
+
+import GridOptions from "../../data/options.data";
 
 class Grid extends Component {
+	constructor() {
+		super();
+		this.state = {
+			activeItem: null
+		}
+		this.updateActiveItem = this.updateActiveItem.bind(this);
+	}
+
 	//render single <GridItem /> (used in map function)
 	renderItem(i) {
 		const gridItems = this.props.route.gridItems;
 		let id = i;
 		return (
-			<GridItem
-				item={gridItems[i]}
+			<LazyLoad
 				key={id}
-			/>
+				height={500}
+				placeholder={<GridPlaceholder />}>
+				<GridItem
+					item={gridItems[i]}
+					onClick={this.updateActiveItem}
+				/>
+			</LazyLoad>
 		)
 	}
 
-	//map gridItems to individual <GridItem />'s - also
+	shuffleGrid(grid) {
+		var currentIndex = grid.length, temporaryValue, randomIndex;
+
+		while (0 !== currentIndex) {
+			randomIndex = Math.floor(Math.random() * currentIndex);
+			currentIndex -= 1;
+			temporaryValue = grid[currentIndex];
+			grid[currentIndex] = grid[randomIndex];
+			grid[randomIndex] = temporaryValue;
+		}
+		return grid;
+	}
+
 	generateGrid() {
 		//if filter type is "latest" (aka view all) return all
 		if(this.props.route.filterBy == "content stream") {
 			const gridDOM = this.props.route.gridItems.map((item, i) => {
 				return this.renderItem(i)
 			});
-			return gridDOM;
+			if(GridOptions.shuffleGrid)
+				return this.shuffleGrid(gridDOM);
+			else
+				return gridDOM;
 		}
 		//else only return those that match type
 		else {
@@ -35,8 +69,13 @@ class Grid extends Component {
 		}
 	}
 
+	updateActiveItem(item) {
+		this.setState({activeItem: item});
+	}
+
 	render() {
 		const filterBy = this.props.route.filterBy;
+		const activeItem = this.state.activeItem;
 
 		return (
 			<div>
@@ -44,6 +83,12 @@ class Grid extends Component {
 				<section className="grid-list">
 					{this.generateGrid()}
 				</section>
+				<ReactCSSTransitionGroup
+          transitionName="modal-fade"
+          transitionEnterTimeout={350}
+          transitionLeaveTimeout={350}>
+					{activeItem != null ? <GridModal item={activeItem} onClick={this.updateActiveItem} /> : null}
+				</ReactCSSTransitionGroup>
 			</div>
 		)
 	}

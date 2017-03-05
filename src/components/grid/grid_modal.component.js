@@ -1,6 +1,6 @@
 import React from 'react';
 
-function GridItem(props) {
+function GridModal(props) {
 	const itemTitle = props.item.title;
 	const itemMedia = process.env.PUBLIC_URL + "/imgContent/" + props.item.previewMedia;
 	// const itemId = itemTitle.replace(/\s+/g, '-').toLowerCase();
@@ -8,10 +8,17 @@ function GridItem(props) {
 	// const itemDate = props.item.date;
 	// const itemDescription = props.item.previewText;
 	return (
-			<div className="grid-list-item" onClick={() => props.onClick(props.item)}>
-				<img src={itemMedia} alt={itemTitle} />
+		<div className="grid-modal" onClick={() => props.onClick(null)}>
+			<div className="grid-modal-content">
+				<div className="grid-modal-content-text">
+					{itemTitle}
+				</div>
+				<div className="grid-modal-content-image">
+					<img src={itemMedia} alt="enlarge" />
+				</div>
 			</div>
+		</div>
 	)
 }
 
-export default GridItem;
+export default GridModal;

@@ -29,7 +29,6 @@ class BlogApp extends Component {
         />
 			)
 		});
-    console.log(collectionRoutes)
 		return collectionRoutes;
   }
 
@@ -47,18 +46,6 @@ class BlogApp extends Component {
             gridItems={gridItems}
             filterBy={filterBy}
           />
-          {/* <Route path="/svg" component={Grid}
-            gridItems={gridItems}
-            filterBy="svg"
-          />
-          <Route path="/drawing" component={Grid}
-            gridItems={gridItems}
-            filterBy="drawing"
-          />
-          <Route path="/video" component={Grid}
-            gridItems={gridItems}
-            filterBy="video"
-          /> */}
           {this.generateCollectionRoutes(gridItems)}
           <Route path="/:id" component={GridDetail}
             gridItems={gridItems}
