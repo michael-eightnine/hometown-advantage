@@ -1,7 +1,7 @@
 const collections = [
 	"words stretched in arial",
 	"black lodges",
-	"another collection aye"
+	"live under powerlines"
 ]
 
 export default collections;

@@ -26,6 +26,7 @@ class BlogApp extends Component {
         <Route key={i} path={linkRef} component={Grid}
           gridItems={gridItems}
           filterBy={item}
+          isCollection={true}
         />
 			)
 		});

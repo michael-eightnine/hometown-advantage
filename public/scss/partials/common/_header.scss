@@ -66,6 +66,7 @@ header {
 				flex-basis: 100px;
 				display: block;
 				text-align: right;
+				height: 29px;
 
 				.nav-toggle {
 					width: 30px;
@@ -75,6 +76,8 @@ header {
 					flex-direction: column;
 					align-content: space-around;
 					cursor: pointer;
+					height: 29px;
+					padding-top: 8px;
 
 					span {
 						display: block;

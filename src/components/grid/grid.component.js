@@ -6,6 +6,9 @@ import GridItem from "./grid_item.component";
 import GridModal from "./grid_modal.component";
 import GridPlaceholder from './grid_placeholder.component.js'
 
+import StreamFooter from './stream/stream_footer.component.js'
+import CollectionBtn from './collections/collection_btn.component.js'
+
 import GridOptions from "../../data/options.data";
 
 class Grid extends Component {
@@ -24,7 +27,7 @@ class Grid extends Component {
 		return (
 			<LazyLoad
 				key={id}
-				offset={-50}
+				offset={-10}
 				placeholder={<GridPlaceholder />}>
 				<GridItem
 					item={gridItems[i]}
@@ -48,10 +51,12 @@ class Grid extends Component {
 	}
 
 	generateGrid() {
-		//if filter type is "latest" (aka view all) return all
+		//if filter type is "content stream" (aka view all) return all
 		if(this.props.route.filterBy == "content stream") {
 			const gridDOM = this.props.route.gridItems.map((item, i) => {
-				return this.renderItem(i)
+				if(!item.noStream) {
+					return this.renderItem(i)
+				}
 			});
 			if(GridOptions.shuffleGrid)
 				return this.shuffleGrid(gridDOM);
@@ -76,12 +81,15 @@ class Grid extends Component {
 	render() {
 		const filterBy = this.props.route.filterBy;
 		const activeItem = this.state.activeItem;
+		const isCollection = this.props.route.isCollection;
 
 		return (
 			<div>
 				<h1 className="grid-header" data-filterBy={filterBy}>{filterBy}</h1>
 				<section className="grid-list">
 					{this.generateGrid()}
+					{isCollection ? <CollectionBtn /> : null}
+					{filterBy == "content stream" ? <StreamFooter /> : null}
 				</section>
 				<ReactCSSTransitionGroup
           transitionName="modal-fade"

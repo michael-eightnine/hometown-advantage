@@ -11,7 +11,7 @@
 		text-decoration: none;
 	}
 
-	img {
+	img, svg {
 		width: 100%;
 	}
 
@@ -21,12 +21,32 @@
 
 	@media(max-width: $mobileBreak) {
 		width: 50%;
+		padding: 3px;
 
 		&:nth-of-type(odd) {
 			padding-left: 0;
 		}
 		&:nth-of-type(even) {
 			padding-right: 0;
+		}
+	}
+
+	//COLLECTION'S BUTTON
+	&.collection-btn-item {
+		margin-left: auto;
+		margin-right: 0;
+		text-align: right;
+		align-self: flex-end;
+
+		a {
+			display: block;
+			text-align: right;
+			margin-left: auto;
+		}
+
+		img, svg {
+			width: 210px;
+			max-width: 90%;
 		}
 	}
 }
