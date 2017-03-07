@@ -13,7 +13,7 @@
 		transform-origin: center center;
 
 		&:last-of-type {
-			animation-delay: -1.5s;
+			animation-delay: -3s;
 		}
 	}
 
@@ -30,9 +30,9 @@
 
 @keyframes spinner {
 	from {
-		transform: translateY(-50%) rotate(0) scale(.5);
+		transform: translateY(-50%) scale(.5);
 	}
 	to {
-		transform: translateY(-50%) rotate(360deg) scale(1.5);
+		transform: translateY(-50%) scale(1);
 	}
 }

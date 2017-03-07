@@ -27,7 +27,7 @@ class Grid extends Component {
 		return (
 			<LazyLoad
 				key={id}
-				offset={-10}
+				offset={50}
 				placeholder={<GridPlaceholder />}>
 				<GridItem
 					item={gridItems[i]}

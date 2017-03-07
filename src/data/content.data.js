@@ -30,6 +30,18 @@ const content = [
     "noStream": true
   },
   {
+    "title": "when",
+    "type": "words stretched in arial",
+    "previewMedia": "arial-1.svg",
+    "noStream": false
+  },
+  {
+    "title": "Canvas 24",
+    "type": "content stream",
+    "previewMedia": "canvas (24).svg",
+    "noStream": false
+  },
+  {
     "title": "Canvas 6",
     "type": "content stream",
     "previewMedia": "canvas (6).svg",
@@ -72,6 +84,12 @@ const content = [
     "noStream": false
   },
   {
+    "title": "i die",
+    "type": "words stretched in arial",
+    "previewMedia": "arial-2.svg",
+    "noStream": false
+  },
+  {
     "title": "Canvas 16",
     "type": "content stream",
     "previewMedia": "canvas (16).svg",
@@ -83,12 +101,12 @@ const content = [
     "previewMedia": "canvas (4).svg",
     "noStream": false
   },
-  {
-    "title": "Canvas 5",
-    "type": "content stream",
-    "previewMedia": "canvas (5).svg",
-    "noStream": false
-  },
+  // {
+  //   "title": "Canvas 5",
+  //   "type": "content stream",
+  //   "previewMedia": "canvas (5).svg",
+  //   "noStream": false
+  // },
   {
     "title": "Canvas 3",
     "type": "content stream",
@@ -108,6 +126,12 @@ const content = [
     "noStream": false
   },
   {
+    "title": "give",
+    "type": "words stretched in arial",
+    "previewMedia": "arial-3.svg",
+    "noStream": false
+  },
+  {
     "title": "Canvas 10",
     "type": "content stream",
     "previewMedia": "canvas (10).svg",
@@ -123,6 +147,12 @@ const content = [
     "title": "Canvas 21",
     "type": "content stream",
     "previewMedia": "canvas (21).svg",
+    "noStream": false
+  },
+  {
+    "title": "my pistol",
+    "type": "words stretched in arial",
+    "previewMedia": "arial-4.svg",
     "noStream": false
   },
   {
@@ -147,6 +177,12 @@ const content = [
     "title": "Canvas 11",
     "type": "content stream",
     "previewMedia": "canvas (11).svg",
+    "noStream": false
+  },
+  {
+    "title": "to",
+    "type": "words stretched in arial",
+    "previewMedia": "arial-5.svg",
     "noStream": false
   },
   {
@@ -177,6 +213,12 @@ const content = [
     "title": "Black Lodge v2",
     "type": "black lodges",
     "previewMedia": "black-lodge-2.svg",
+    "noStream": false
+  },
+  {
+    "title": "my son",
+    "type": "words stretched in arial",
+    "previewMedia": "arial-6.svg",
     "noStream": false
   },
   {

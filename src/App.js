@@ -41,7 +41,7 @@ class BlogApp extends Component {
     })
 
     return (
-      <Router history={history}>
+      <Router onUpdate={() => window.scrollTo(0, 0)} history={history}>
         <Route path="/" component={Splash} />
         <Route component={Main} filterBy={filterBy}>
           <Route path="/stream" component={Grid}
@@ -51,6 +51,8 @@ class BlogApp extends Component {
           {this.generateCollectionRoutes(gridItems)}
           <Route path="/the-advantage" component={About}/>
         </Route>
+        {/* CATCH ALL FOR 404's/NON PAGES */}
+        <Route path="*" component={Splash} />
       </Router>
 		)
 	}

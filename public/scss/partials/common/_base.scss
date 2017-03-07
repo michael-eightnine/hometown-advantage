@@ -20,10 +20,8 @@ body {
 .view-wrap {
 	width: 100%;
 	padding-left: 200px;
-	padding-top: 75px;
 
 	@media(max-width: $tabletBreak) {
-		padding-top: 65px;
 		padding-left: 0;
 	}
 }
