@@ -37,7 +37,7 @@ class BlogApp extends Component {
     const gridItems = this.state.posts;
     const filterBy = this.state.filterBy;
     const history = useRouterHistory(createHistory)({
-      basename: '/blog-dev'
+      basename: '/'
     })
 
     return (
