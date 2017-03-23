@@ -35,10 +35,10 @@ class Main extends Component {
 
 	generateCollectionLinks() {
 		const collectionLinks = CollectionList.map((item, i) => {
-			let linkRef = "/collections/" + item.replace(/\s+/g, '-').toLowerCase();
+			let linkRef = "/collections/" + item.name.replace(/\s+/g, '-').toLowerCase();
 			return (
 				<li key={i} className="submenu-item">
-					<Link to={linkRef} activeClassName="active-link" className="submenu-item-link" onClick={() => this.handleSubmenuClick(false)}>{item}</Link>
+					<Link to={linkRef} activeClassName="active-link" className="submenu-item-link" onClick={() => this.handleSubmenuClick(false)}>{item.name}</Link>
 				</li>
 			)
 		});

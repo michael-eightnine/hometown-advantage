@@ -15,5 +15,9 @@
 @import "partials/grid/_grid-modal";
 @import "partials/grid/_grid-placeholder";
 
+@import "partials/collections/valueMachine/_valueMachineBase";
+@import "partials/collections/valueMachine/_fileUpload";
+@import "partials/collections/valueMachine/_fileDisplay";
+
 @import "partials/pages/_content-pages";
 @import "partials/pages/_about";
