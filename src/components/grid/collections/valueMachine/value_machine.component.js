@@ -8,27 +8,16 @@ class ValueMachine extends Component {
 	constructor() {
 		super();
 		this.state = {
-			image: null,
-			validUpload: true
+			image: null
 		}
 		this.setTargetFile = this.setTargetFile.bind(this)
 	}
 
-	setTargetFile(files) {
-		const file = files[0];
-    const imageType = /^image\//;
-
-    if (!imageType.test(file.type)) {
-      console.log('no image -- throw invalid upload');
-			this.setState({validUpload: false})
-			return false;
-    }
-		else {
-			this.setState({validUpload: true})
-		}
-
+	setTargetFile(targetFile) {
+		const file = targetFile;
 		const self = this;
     const reader = new FileReader();
+
     reader.onload = function(upload) {
         self.setState({
             image: upload.target.result
@@ -42,7 +31,7 @@ class ValueMachine extends Component {
 		return (
 			<section className="value-machine">
 				<ReactCSSTransitionGroup
-					transitionName="upload-fade"
+					transitionName="affirm-fade"
 					transitionEnterTimeout={350}
 					transitionLeaveTimeout={350}>
 					{imgSrc == null ?
@@ -52,7 +41,7 @@ class ValueMachine extends Component {
 					}
 				</ReactCSSTransitionGroup>
 				<ReactCSSTransitionGroup
-					transitionName="display-fade"
+					transitionName="affirm-fade"
 					transitionEnterTimeout={350}
 					transitionLeaveTimeout={350}>
 					{imgSrc != null ?
