@@ -7,4 +7,4 @@ Content stream/blog built with ReactJS & SCSS for Chicago based artist Hometown 
 - Support for curated collections
 - 100% SVG
 
-### [Check it out!](http://eightnine.co/hometown-advantage)
+### [Check it out!](http://hta.eightnine.co)
