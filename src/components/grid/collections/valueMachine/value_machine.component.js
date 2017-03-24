@@ -3,14 +3,17 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 
 import FileUpload from './fileUpload/file_upload.component';
 import FileDisplay from './fileDisplay/file_display.component';
+import AffirmComplete from './affirmComplete/affirm_complete.component'
 
 class ValueMachine extends Component {
 	constructor() {
 		super();
 		this.state = {
-			image: null
+			image: null,
+			complete: false
 		}
-		this.setTargetFile = this.setTargetFile.bind(this)
+		this.setTargetFile = this.setTargetFile.bind(this);
+		this.setAffirmComplete = this.setAffirmComplete.bind(this);
 	}
 
 	setTargetFile(targetFile) {
@@ -26,15 +29,21 @@ class ValueMachine extends Component {
     reader.readAsDataURL(file);
 	}
 
+	setAffirmComplete() {
+		this.setState({complete: true})
+	}
+
 	render() {
 		const imgSrc = this.state.image;
+		const complete = this.state.complete;
+		const valueMachineClass = complete ? "value-machine value-machine-complete" : "value-machine";
 		return (
-			<section className="value-machine">
+			<section className={valueMachineClass}>
 				<ReactCSSTransitionGroup
 					transitionName="affirm-fade"
 					transitionEnterTimeout={350}
 					transitionLeaveTimeout={350}>
-					{imgSrc == null ?
+					{imgSrc == null && !complete ?
 						<FileUpload
 							onDrop={this.setTargetFile}
 						/> : null
@@ -44,13 +53,18 @@ class ValueMachine extends Component {
 					transitionName="affirm-fade"
 					transitionEnterTimeout={350}
 					transitionLeaveTimeout={350}>
-					{imgSrc != null ?
+					{imgSrc != null && !complete ?
 						<FileDisplay
 							imgSrc={imgSrc}
+							onComplete={this.setAffirmComplete}
 						/>
 						: null
 					}
 				</ReactCSSTransitionGroup>
+				{complete ?
+					<AffirmComplete />
+					: null
+				}
 			</section>
 		)
 	}
