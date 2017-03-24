@@ -15,8 +15,6 @@ class Main extends Component {
 			navActive: false,
 			collectionActive: false
 		}
-		this.handleSubmenuClick = this.handleSubmenuClick.bind(this);
-		this.handleNavClick = this.handleNavClick.bind(this);
 	}
 
 	handleSubmenuClick(isToggle) {
@@ -66,7 +64,11 @@ class Main extends Component {
 							<Link to="/stream" activeClassName="active-link" className="nav-item-link" onClick={() => this.handleNavClick(false)}>Stream</Link>
 						</li>
 						<li className="nav-item has-submenu">
-							<div onClick={() => this.handleSubmenuClick(true)} className={this.state.collectionActive ? "submenu-toggle nav-item-link active-link" : "submenu-toggle nav-item-link"}>Collections</div>
+							<div
+								onClick={() => this.handleSubmenuClick(true)}
+								className={this.state.collectionActive ? "submenu-toggle nav-item-link active-link" : "submenu-toggle nav-item-link"}>
+								Collections
+							</div>
 							<ul className={this.state.submenuActive ? "submenu active" : "submenu"}>
 								<li className="submenu-header">
 									Collections
