@@ -1,5 +1,9 @@
 const collections = [
 	{
+		name: "an inner kiln",
+		isGrid: true
+	},
+	{
 		name: "words stretched in arial",
 		isGrid: true
 	},
@@ -10,12 +14,13 @@ const collections = [
 	{
 		name: "live under powerlines",
 		isGrid: true
-	},
-	{
-		name: "value machine",
-		isGrid: false,
-		componentName: "ValueMachine"
 	}
+	// ,
+	// {
+	// 	name: "value machine",
+	// 	isGrid: false,
+	// 	componentName: "ValueMachine"
+	// }
 ]
 
 export default collections;

@@ -8,7 +8,7 @@ import GridModal from "./grid_modal.component";
 import GridPlaceholder from './grid_placeholder.component.js'
 import StreamFooter from './stream/stream_footer.component.js'
 
-import ValueMachine from './collections/valueMachine/value_machine.component'
+// import ValueMachine from './collections/valueMachine/value_machine.component'
 import CollectionBtn from './collections/collection_btn.component.js'
 
 import GridOptions from "../../data/options.data";
@@ -19,7 +19,7 @@ class Grid extends Component {
 		this.state = {
 			activeItem: null,
 			collectionComponents: {
-				ValueMachine: ValueMachine
+				// ValueMachine: ValueMachine
 			}
 		}
 		this.updateActiveItem = this.updateActiveItem.bind(this);

@@ -1,11 +1,71 @@
 const content = [
   {
+    "title": "water",
+    "type": "an inner kiln",
+    "previewMedia": "kiln-1.svg",
+    "noStream": true
+  },
+  {
+    "title": "oil",
+    "type": "an inner kiln",
+    "previewMedia": "kiln-2.svg",
+    "noStream": false
+  },
+  {
+    "title": "liquor",
+    "type": "an inner kiln",
+    "previewMedia": "kiln-3.svg",
+    "noStream": true
+  },
+  {
+    "title": "heart",
+    "type": "an inner kiln",
+    "previewMedia": "kiln-4.svg",
+    "noStream": true
+  },
+  {
     "isPromo": true,
     "type": "an inner kiln",
     "promoType": "collection",
     "title": "an inner kiln",
     "itemCount": 9,
     "cta": "v rare pottery",
+    "noStream": false
+  },
+  {
+    "title": "oil 2",
+    "type": "an inner kiln",
+    "previewMedia": "kiln-5.svg",
+    "noStream": false
+  },
+  {
+    "title": "wax",
+    "type": "an inner kiln",
+    "previewMedia": "kiln-6.svg",
+    "noStream": true
+  },
+  {
+    "title": "water 2",
+    "type": "an inner kiln",
+    "previewMedia": "kiln-7.svg",
+    "noStream": true
+  },
+  {
+    "title": "cream",
+    "type": "an inner kiln",
+    "previewMedia": "kiln-8.svg",
+    "noStream": true
+  },
+  {
+    "title": "blood",
+    "type": "an inner kiln",
+    "previewMedia": "kiln-9.svg",
+    "noStream": true
+  },
+  {
+    "title": "Canvas 45",
+    "type": "content stream",
+    "previewMedia": "canvas (45).svg",
     "noStream": false
   },
   {
@@ -24,6 +84,12 @@ const content = [
     "title": "Canvas 25",
     "type": "content stream",
     "previewMedia": "canvas (25).svg",
+    "noStream": false
+  },
+  {
+    "title": "Canvas 46",
+    "type": "content stream",
+    "previewMedia": "canvas (46).svg",
     "noStream": false
   },
   {
