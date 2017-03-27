@@ -1,11 +1,11 @@
 const content = [
   {
     "isPromo": true,
-    "type": "black lodges",
+    "type": "an inner kiln",
     "promoType": "collection",
     "title": "an inner kiln",
     "itemCount": 9,
-    "cta": "Check it out...",
+    "cta": "v rare pottery",
     "noStream": false
   },
   {
@@ -156,6 +156,15 @@ const content = [
     "title": "Canvas 15",
     "type": "content stream",
     "previewMedia": "canvas (15).svg",
+    "noStream": false
+  },
+  {
+    "isPromo": true,
+    "type": "black lodges",
+    "promoType": "collection",
+    "title": "black lodges",
+    "itemCount": 3,
+    "cta": "Velvet curtain",
     "noStream": false
   },
   {
