@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import LazyLoad from 'react-lazyload';
+import LazyLoad, { forceCheck } from 'react-lazyload';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 
 import GridItem from "./grid_item.component";
+import GridPromo from "./grid_promo.component";
 import GridModal from "./grid_modal.component";
 import GridPlaceholder from './grid_placeholder.component.js'
 import StreamFooter from './stream/stream_footer.component.js'
@@ -24,34 +25,27 @@ class Grid extends Component {
 		this.updateActiveItem = this.updateActiveItem.bind(this);
 	}
 
-	//render single <GridItem /> (used in map function)
-	renderItem(i) {
+	//render single <GridItem /> or <GridPromo /> (used in map function)
+	renderItem(i, isPromo) {
 		const gridItems = this.props.route.gridItems;
 		let id = i;
 		return (
 			<LazyLoad
 				key={id}
-				offset={50}
+				offset={100}
 				placeholder={<GridPlaceholder />}>
-				<GridItem
-					item={gridItems[i]}
-					onClick={this.updateActiveItem}
-				/>
+				{isPromo === true ?
+					<GridPromo
+						item={gridItems[i]}
+					/>
+					:
+					<GridItem
+						item={gridItems[i]}
+						onClick={this.updateActiveItem}
+					/>
+				}
 			</LazyLoad>
 		)
-	}
-
-	shuffleGrid(grid) {
-		var currentIndex = grid.length, temporaryValue, randomIndex;
-
-		while (0 !== currentIndex) {
-			randomIndex = Math.floor(Math.random() * currentIndex);
-			currentIndex -= 1;
-			temporaryValue = grid[currentIndex];
-			grid[currentIndex] = grid[randomIndex];
-			grid[randomIndex] = temporaryValue;
-		}
-		return grid;
 	}
 
 	generateGrid() {
@@ -59,18 +53,15 @@ class Grid extends Component {
 		if(this.props.route.filterBy == "content stream") {
 			const gridDOM = this.props.route.gridItems.map((item, i) => {
 				if(!item.noStream) {
-					return this.renderItem(i)
+					return this.renderItem(i, item.isPromo)
 				}
 			});
-			if(GridOptions.shuffleGrid)
-				return this.shuffleGrid(gridDOM);
-			else
-				return gridDOM;
+			return gridDOM;
 		}
 		//else only return those that match type
 		else {
 			const gridDOM = this.props.route.gridItems.map((item, i) => {
-				if(item.type == this.props.route.filterBy) {
+				if(item.type == this.props.route.filterBy && !item.isPromo) {
 					return this.renderItem(i)
 				}
 			});
@@ -81,6 +72,9 @@ class Grid extends Component {
 	updateActiveItem(item) {
 		this.setState({activeItem: item});
 	}
+
+	componentDidMount() { forceCheck(); }
+	componentDidUpdate() { forceCheck(); }
 
 	render() {
 		const filterBy = this.props.route.filterBy;

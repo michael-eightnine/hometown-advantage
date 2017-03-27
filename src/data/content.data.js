@@ -1,5 +1,14 @@
 const content = [
   {
+    "isPromo": true,
+    "type": "black lodges",
+    "promoType": "collection",
+    "title": "an inner kiln",
+    "itemCount": 9,
+    "cta": "Check it out...",
+    "noStream": false
+  },
+  {
     "title": "Canvas 39",
     "type": "content stream",
     "previewMedia": "canvas (39).svg",
