@@ -98,6 +98,10 @@
   @media(max-width: $mobileBreak) {
     padding-bottom: 65px;
   }
+
+  &--is-component {
+    display: block;
+  }
 }
 
 //FOOTER

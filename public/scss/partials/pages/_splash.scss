@@ -45,7 +45,7 @@
 		z-index: -1;
 		pointer-events: none;
 
-		&.modal-fade-enter-active {
+		&.splash-fade-enter-active {
 			opacity: 1;
 			transform: translateY(0);
 			z-index: 100;
@@ -59,7 +59,7 @@
 		z-index: -1;
 		pointer-events: none;
 
-		&.modal-fade-appear-active {
+		&.splash-fade-appear-active {
 			opacity: 1;
 			transform: translateY(0);
 			z-index: 100;
@@ -73,7 +73,7 @@
 		z-index: 100;
 		pointer-events: auto;
 
-		&.modal-fade-leave-active {
+		&.splash-fade-leave-active {
 			opacity: 0;
 			transform: translateY(-50px);
 			z-index: -1;

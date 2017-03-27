@@ -21,12 +21,14 @@ class BlogApp extends Component {
 
   generateCollectionRoutes(gridItems) {
     const collectionRoutes = CollectionList.map((item, i) => {
-			let linkRef = "/collections/" + item.replace(/\s+/g, '-').toLowerCase();
+			let linkRef = "/collections/" + item.name.replace(/\s+/g, '-').toLowerCase();
 			return (
         <Route key={i} path={linkRef} component={Grid}
           gridItems={gridItems}
-          filterBy={item}
+          filterBy={item.name}
           isCollection={true}
+          isGridCollection={item.isGrid}
+          collectionComponentName={item.componentName}
         />
 			)
 		});
@@ -47,6 +49,7 @@ class BlogApp extends Component {
           <Route path="/stream" component={Grid}
             gridItems={gridItems}
             filterBy={filterBy}
+            isGridCollection={true}
           />
           {this.generateCollectionRoutes(gridItems)}
           <Route path="/the-advantage" component={About}/>
