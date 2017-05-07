@@ -1,5 +1,125 @@
 const content = [
   {
+    "title": "Canvas 65",
+    "type": "content stream",
+    "previewMedia": "canvas (65).svg",
+    "noStream": false
+  },
+  {
+    "title": "Canvas 53",
+    "type": "content stream",
+    "previewMedia": "canvas (53).svg",
+    "noStream": false
+  },
+  {
+    "title": "Canvas 59",
+    "type": "content stream",
+    "previewMedia": "canvas (59).svg",
+    "noStream": false
+  },
+  {
+    "title": "Canvas 54",
+    "type": "content stream",
+    "previewMedia": "canvas (54).svg",
+    "noStream": false
+  },
+  {
+    "title": "Canvas 57",
+    "type": "content stream",
+    "previewMedia": "canvas (57).svg",
+    "noStream": false
+  },
+  {
+    "title": "Canvas 63",
+    "type": "content stream",
+    "previewMedia": "canvas (63).svg",
+    "noStream": false
+  },
+  {
+    "title": "Canvas 62",
+    "type": "content stream",
+    "previewMedia": "canvas (62).svg",
+    "noStream": false
+  },
+  {
+    "title": "Canvas 60",
+    "type": "content stream",
+    "previewMedia": "canvas (60).svg",
+    "noStream": false
+  },
+  {
+    "title": "Canvas 58",
+    "type": "content stream",
+    "previewMedia": "canvas (58).svg",
+    "noStream": false
+  },
+  {
+    "title": "Canvas 64",
+    "type": "content stream",
+    "previewMedia": "canvas (64).svg",
+    "noStream": false
+  },
+  {
+    "title": "Canvas 50",
+    "type": "content stream",
+    "previewMedia": "canvas (50).svg",
+    "noStream": false
+  },
+  {
+    "title": "Canvas 56",
+    "type": "content stream",
+    "previewMedia": "canvas (56).svg",
+    "noStream": false
+  },
+  {
+    "title": "Canvas 49",
+    "type": "content stream",
+    "previewMedia": "canvas (49).svg",
+    "noStream": false
+  },
+  {
+    "title": "Canvas 51",
+    "type": "content stream",
+    "previewMedia": "canvas (51).svg",
+    "noStream": false
+  },
+  {
+    "title": "Canvas 61",
+    "type": "content stream",
+    "previewMedia": "canvas (61).svg",
+    "noStream": false
+  },
+  {
+    "title": "Canvas 47",
+    "type": "content stream",
+    "previewMedia": "canvas (47).svg",
+    "noStream": false
+  },
+  {
+    "title": "Canvas 66",
+    "type": "content stream",
+    "previewMedia": "canvas (66).svg",
+    "noStream": false
+  },
+  {
+    "title": "Canvas 48",
+    "type": "content stream",
+    "previewMedia": "canvas (48).svg",
+    "noStream": false
+  },
+  {
+    "title": "Canvas 55",
+    "type": "content stream",
+    "previewMedia": "canvas (55).svg",
+    "noStream": false
+  },
+  {
+    "title": "Canvas 52",
+    "type": "content stream",
+    "previewMedia": "canvas (52).svg",
+    "noStream": false
+  },
+  {
     "title": "water",
     "type": "an inner kiln",
     "previewMedia": "kiln-1.svg",
@@ -63,9 +183,15 @@ const content = [
     "noStream": true
   },
   {
+    "title": "clay",
+    "type": "an inner kiln",
+    "previewMedia": "kiln-10.svg",
+    "noStream": true
+  },
+  {
     "title": "Canvas 45",
     "type": "content stream",
-    "previewMedia": "canvas (45).svg",
+    "previewMedia": "canvas (45-b).svg",
     "noStream": false
   },
   {
@@ -89,7 +215,7 @@ const content = [
   {
     "title": "Canvas 46",
     "type": "content stream",
-    "previewMedia": "canvas (46).svg",
+    "previewMedia": "canvas (46-b).svg",
     "noStream": false
   },
   {

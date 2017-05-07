@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Router, Route, useRouterHistory} from 'react-router';
 import { createHistory } from 'history'
+import './scss/main.min.css';
 
 import Splash from './components/splash/splash.component';
 import Main from './components/common/main.component';
@@ -9,6 +10,7 @@ import About from './components/about/about.component';
 
 import ContentData from './data/content.data';
 import CollectionList from './data/collection.data';
+import gridOptions from './data/options.data';
 
 class BlogApp extends Component {
   constructor() {
@@ -18,6 +20,14 @@ class BlogApp extends Component {
 			filterBy: "content stream"
     };
 	}
+
+  componentWillMount() {
+    if(gridOptions.nightMode) {
+      const currentTime = new Date().getHours();
+      // if(currentTime > 20 || currentTime < 7)
+        document.body.classList.add("night-mode");
+    }
+  }
 
   generateCollectionRoutes(gridItems) {
     const collectionRoutes = CollectionList.map((item, i) => {
