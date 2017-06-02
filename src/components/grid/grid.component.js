@@ -11,8 +11,6 @@ import StreamFooter from './stream/stream_footer.component.js'
 // import ValueMachine from './collections/valueMachine/value_machine.component'
 import CollectionBtn from './collections/collection_btn.component.js'
 
-import GridOptions from "../../data/options.data";
-
 class Grid extends Component {
 	constructor() {
 		super();

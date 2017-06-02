@@ -1,6 +1,10 @@
 const gridOptions = {
 	shuffleGrid: false,
-	nightMode: true
+	nightMode: {
+		active: true,
+		start: 10,
+		end: 6
+	}
 }
 
 export default gridOptions;

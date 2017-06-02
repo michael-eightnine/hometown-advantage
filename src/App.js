@@ -12,6 +12,8 @@ import ContentData from './data/content.data';
 import CollectionList from './data/collection.data';
 import gridOptions from './data/options.data';
 
+import {isIE} from './util/util';
+
 class BlogApp extends Component {
   constructor() {
 		super();
@@ -22,9 +24,9 @@ class BlogApp extends Component {
 	}
 
   componentWillMount() {
-    if(gridOptions.nightMode) {
+    if(gridOptions.nightMode.active) {
       const currentTime = new Date().getHours();
-      // if(currentTime > 20 || currentTime < 7)
+      if((currentTime > gridOptions.nightMode.start || currentTime < gridOptions.nightMode.end) && !isIE())
         document.body.classList.add("night-mode");
     }
   }
