@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import LazyLoad, { forceCheck } from 'react-lazyload';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
+import {CSSTransitionGroup as ReactCSSTransitionGroup} from 'react-transition-group'
 
 import GridItem from "./grid_item.component";
 import GridPromo from "./grid_promo.component";

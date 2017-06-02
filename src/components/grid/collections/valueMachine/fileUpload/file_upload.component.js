@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
+import {CSSTransitionGroup as ReactCSSTransitionGroup} from 'react-transition-group'
 
 import invalidImage from './../../../../../svg/affirmation/noImageFace.svg';
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
+import {CSSTransitionGroup as ReactCSSTransitionGroup} from 'react-transition-group'
 
 import indentity from '../../svg/identity.svg';
 
