@@ -2,8 +2,8 @@ const gridOptions = {
 	shuffleGrid: false,
 	nightMode: {
 		active: true,
-		start: 10,
-		end: 6
+		start: 19,
+		end: 5
 	}
 }
 

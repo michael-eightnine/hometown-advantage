@@ -8,7 +8,7 @@ import GridModal from "./grid_modal.component";
 import GridPlaceholder from './grid_placeholder.component.js'
 import StreamFooter from './stream/stream_footer.component.js'
 
-// import ValueMachine from './collections/valueMachine/value_machine.component'
+import ValueMachine from './collections/valueMachine/value_machine.component'
 import CollectionBtn from './collections/collection_btn.component.js'
 
 class Grid extends Component {
@@ -17,7 +17,7 @@ class Grid extends Component {
 		this.state = {
 			activeItem: null,
 			collectionComponents: {
-				// ValueMachine: ValueMachine
+				ValueMachine: ValueMachine
 			}
 		}
 		this.updateActiveItem = this.updateActiveItem.bind(this);
@@ -48,10 +48,12 @@ class Grid extends Component {
 
 	generateGrid() {
 		//if filter type is "content stream" (aka view all) return all
-		if(this.props.route.filterBy == "content stream") {
+		if(this.props.route.filterBy === "content stream") {
 			const gridDOM = this.props.route.gridItems.map((item, i) => {
 				if(!item.noStream) {
 					return this.renderItem(i, item.isPromo)
+				} else {
+					return null
 				}
 			});
 			return gridDOM;
@@ -59,8 +61,10 @@ class Grid extends Component {
 		//else only return those that match type
 		else {
 			const gridDOM = this.props.route.gridItems.map((item, i) => {
-				if(item.type == this.props.route.filterBy && !item.isPromo) {
+				if(item.type === this.props.route.filterBy && !item.isPromo) {
 					return this.renderItem(i)
+				} else {
+					return null
 				}
 			});
 			return gridDOM;
@@ -88,7 +92,7 @@ class Grid extends Component {
 					<section className="grid-list">
 						{this.generateGrid()}
 						{isCollection ? <CollectionBtn /> : null}
-						{filterBy == "content stream" ? <StreamFooter /> : null}
+						{filterBy === "content stream" ? <StreamFooter /> : null}
 					</section>
 				}
 				{isGridCollection === true &&

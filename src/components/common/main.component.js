@@ -19,9 +19,9 @@ class Main extends Component {
 
 	handleSubmenuClick(isToggle) {
 		this.setState({submenuActive: !this.state.submenuActive});
-		if(isToggle == false)
+		if(isToggle === false)
 			this.setState({collectionActive: true});
-		if(this.state.navActive == true)
+		if(this.state.navActive === true)
 			this.setState({navActive: false});
 	}
 

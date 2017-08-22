@@ -1,5 +1,10 @@
 const collections = [
 	{
+		name: "value machine",
+		isGrid: false,
+		componentName: "ValueMachine"
+	},
+	{
 		name: "an inner kiln",
 		isGrid: true
 	},
@@ -11,16 +16,10 @@ const collections = [
 		name: "black lodges",
 		isGrid: true
 	},
-	{
-		name: "live under powerlines",
-		isGrid: true
-	}
-	// ,
 	// {
-	// 	name: "value machine",
-	// 	isGrid: false,
-	// 	componentName: "ValueMachine"
-	// }
+	// 	name: "live under powerlines",
+	// 	isGrid: true
+	// },
 ]
 
 export default collections;
