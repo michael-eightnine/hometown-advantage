@@ -5,15 +5,15 @@ const collections = [
 		componentName: "ValueMachine"
 	},
 	{
+		name: "black lodges",
+		isGrid: true
+	},
+	{
 		name: "an inner kiln",
 		isGrid: true
 	},
 	{
 		name: "words stretched in arial",
-		isGrid: true
-	},
-	{
-		name: "black lodges",
 		isGrid: true
 	},
 	// {

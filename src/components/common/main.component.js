@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 
-import indentity from '../../svg/identity.svg';
+import identity from '../../svg/identity.svg';
 import wordmark from '../../svg/wordmark.svg';
 import closeIcon from '../../svg/close.svg';
 
@@ -48,8 +48,8 @@ class Main extends Component {
 			<div className="app-wrap">
 				<header>
 					<div className="header-item header-item-logo">
-						<Link to="/" activeClassName="yayo" onClick={() => this.setState({collectionActive: false})}>
-							<img src={indentity} alt="Hometown Advantage" className="identity" />
+						<Link to="/stream" activeClassName="yayo" onClick={() => this.setState({collectionActive: false})}>
+							<img src={identity} alt="Hometown Advantage" className="identity" />
 							<img src={wordmark} alt="Hometown Advantage" className="wordmark" />
 						</Link>
 					</div>

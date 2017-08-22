@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 import {CSSTransitionGroup as ReactCSSTransitionGroup} from 'react-transition-group'
 
-import indentity from '../../svg/identity.svg';
+import identity from '../../svg/identity.svg';
 
 function Splash(props) {
 	return (
@@ -15,7 +15,7 @@ function Splash(props) {
 			<div className="splash animation-fade">
 				<div className="splash-content">
 					<div className="splash-content-section identity">
-						<img src={indentity} alt="Hometown Advantage" />
+						<img src={identity} alt="Hometown Advantage" />
 					</div>
 					<div className="splash-content-section btn">
 						<Link to="/stream">

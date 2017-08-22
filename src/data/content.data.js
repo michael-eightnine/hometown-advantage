@@ -1,8 +1,170 @@
 const content = [
   {
+    "title": "Canvas 80",
+    "type": "content stream",
+    "previewMedia": "canvas (80).svg",
+    "noStream": false
+  },
+  {
+    "title": "Canvas 74",
+    "type": "content stream",
+    "previewMedia": "canvas (74).svg",
+    "noStream": false
+  },
+  {
+    "isPromo": true,
+    "type": "value machine",
+    "promoType": "interactive",
+    "title": "value machine",
+    "itemCount": "∞",
+    "cta": "find out now!",
+    "noStream": false
+  },
+  {
+    "title": "Canvas 83",
+    "type": "content stream",
+    "previewMedia": "canvas (83).svg",
+    "noStream": false
+  },
+  {
+    "title": "Canvas 70",
+    "type": "content stream",
+    "previewMedia": "canvas (70).svg",
+    "noStream": false
+  },
+  {
+    "title": "Canvas 75",
+    "type": "content stream",
+    "previewMedia": "canvas (75).svg",
+    "noStream": false
+  },
+  {
+    "title": "Canvas 82",
+    "type": "content stream",
+    "previewMedia": "canvas (82).svg",
+    "noStream": false
+  },
+  {
+    "title": "Black Lodge v5",
+    "type": "black lodges",
+    "previewMedia": "black-lodge-5.svg",
+    "noStream": false
+  },
+  {
+    "title": "tea",
+    "type": "an inner kiln",
+    "previewMedia": "kiln-11.svg",
+    "noStream": true
+  },
+  {
+    "title": "Canvas 72",
+    "type": "content stream",
+    "previewMedia": "canvas (72).svg",
+    "noStream": false
+  },
+  {
+    "title": "Canvas 78",
+    "type": "content stream",
+    "previewMedia": "canvas (78).svg",
+    "noStream": false
+  },
+  {
+    "title": "Canvas 71",
+    "type": "content stream",
+    "previewMedia": "canvas (71).svg",
+    "noStream": false
+  },
+  {
+    "title": "Canvas 84",
+    "type": "content stream",
+    "previewMedia": "canvas (84).svg",
+    "noStream": false
+  },
+  {
+    "title": "Black Lodge v6",
+    "type": "black lodges",
+    "previewMedia": "black-lodge-6.svg",
+    "noStream": false
+  },
+  {
+    "title": "Black Lodge v4",
+    "type": "black lodges",
+    "previewMedia": "black-lodge-4.svg",
+    "noStream": false
+  },
+  {
+    "title": "Canvas 66",
+    "type": "content stream",
+    "previewMedia": "canvas (66).svg",
+    "noStream": false
+  },
+  {
+    "title": "Canvas 68",
+    "type": "content stream",
+    "previewMedia": "canvas (68).svg",
+    "noStream": false
+  },
+  {
+    "title": "Canvas 85",
+    "type": "content stream",
+    "previewMedia": "canvas (85).svg",
+    "noStream": false
+  },
+  {
+    "title": "Canvas 76",
+    "type": "content stream",
+    "previewMedia": "canvas (76).svg",
+    "noStream": false
+  },
+  {
+    "title": "Canvas 81",
+    "type": "content stream",
+    "previewMedia": "canvas (81).svg",
+    "noStream": false
+  },
+  {
+    "title": "Canvas 77",
+    "type": "content stream",
+    "previewMedia": "canvas (77).svg",
+    "noStream": false
+  },
+  {
+    "title": "Canvas 67",
+    "type": "content stream",
+    "previewMedia": "canvas (67).svg",
+    "noStream": false
+  },
+  {
+    "title": "Canvas 69",
+    "type": "content stream",
+    "previewMedia": "canvas (69).svg",
+    "noStream": false
+  },
+  {
+    "title": "Canvas 73",
+    "type": "content stream",
+    "previewMedia": "canvas (73).svg",
+    "noStream": false
+  },
+  {
+    "title": "Canvas 79",
+    "type": "content stream",
+    "previewMedia": "canvas (79).svg",
+    "noStream": false
+  },
+  {
     "title": "Canvas 65",
     "type": "content stream",
     "previewMedia": "canvas (65).svg",
+    "noStream": false
+  },
+  {
+    "isPromo": true,
+    "type": "black lodges",
+    "promoType": "collection",
+    "title": "black lodges",
+    "itemCount": 6,
+    "cta": "velvet curtain",
     "noStream": false
   },
   {
@@ -96,12 +258,6 @@ const content = [
     "noStream": false
   },
   {
-    "title": "Canvas 66",
-    "type": "content stream",
-    "previewMedia": "canvas (66).svg",
-    "noStream": false
-  },
-  {
     "title": "Canvas 48",
     "type": "content stream",
     "previewMedia": "canvas (48).svg",
@@ -148,7 +304,7 @@ const content = [
     "type": "an inner kiln",
     "promoType": "collection",
     "title": "an inner kiln",
-    "itemCount": 9,
+    "itemCount": 11,
     "cta": "v rare pottery",
     "noStream": false
   },
@@ -348,15 +504,6 @@ const content = [
     "title": "Canvas 15",
     "type": "content stream",
     "previewMedia": "canvas (15).svg",
-    "noStream": false
-  },
-  {
-    "isPromo": true,
-    "type": "black lodges",
-    "promoType": "collection",
-    "title": "black lodges",
-    "itemCount": 3,
-    "cta": "Velvet curtain",
     "noStream": false
   },
   {

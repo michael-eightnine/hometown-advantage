@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Router, Route, useRouterHistory} from 'react-router';
 import { createHistory } from 'history'
-import './scss/main.min.css';
+import './scss/main.css';
 
 import Splash from './components/splash/splash.component';
 import Main from './components/common/main.component';
