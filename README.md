@@ -1,10 +1,13 @@
-## Hometown Advantage - Content Stream
+## ! Hometown Advantage !
 
-Content stream/blog built with ReactJS & SCSS for Chicago based artist Hometown Advantage.
+Content stream & web presence for Chicago based artist Hometown Advantage.
+
+Built with ReactJS, React Router & SCSS!
 
 **Featuring**
 - Infinite scroll content stream
-- Support for curated collections
+- Curated collections
+- Interactive content
 - 100% SVG
 
 ### [Check it out!](http://hta.eightnine.co)

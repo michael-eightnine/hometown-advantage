@@ -48,7 +48,7 @@ class Main extends Component {
 			<div className="app-wrap">
 				<header>
 					<div className="header-item header-item-logo">
-						<Link to="/stream" activeClassName="yayo" onClick={() => this.setState({collectionActive: false})}>
+						<Link to="/stream" onClick={() => this.setState({collectionActive: false})}>
 							<img src={identity} alt="Hometown Advantage" className="identity" />
 							<img src={wordmark} alt="Hometown Advantage" className="wordmark" />
 						</Link>
